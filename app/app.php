@@ -19,8 +19,11 @@
 
 
     $app->get("/", function() use ($app) {
-
-        $colSize = 12/count($_SESSION['list_of_contacts']);
+        $colSize = 12;
+        if (count($_SESSION['list_of_contacts']) > 0 )
+        {
+          $colSize = 12/count($_SESSION['list_of_contacts']);
+        }
         if($colSize < 3)
         {
           $colSize = 3;
