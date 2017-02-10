@@ -39,6 +39,30 @@ li:first-of-type {
   text-decoration: underline;
 
 }
+.row>*:nth-last-child(1):nth-of-type(4n + 1), .row>*:nth-last-child(2):nth-of-type(4n + 1), .row>*:nth-last-child(3):nth-of-type(4n + 1){
+  width:100%;
+}
+.row>*:nth-last-child(1):nth-of-type(4n + 2), .row>*:nth-last-child(2):nth-of-type(4n + 2){
+  width:100%;
+}
+.row>*:nth-last-child(1):nth-of-type(4n + 3){
+  width:100%;
+}
+
+/*.row>*:nth-last-child(1):nth-of-type(4n + 1)~.row>*:nth-last-child(2):nth-of-type(4n + 2),.row>*:nth-last-child(1):nth-of-type(4n + 1)+.row>*:nth-last-child(2):nth-of-type(4n + 2) {
+  color:green;
+  width:50%;
+}
+.row>*:nth-last-child(1):nth-of-type(4n + 1)+.row>*:nth-last-child(2):nth-of-type(4n + 2)+.row>*:nth-last-child(2):nth-of-type(4n + 3) {
+  color:blue;
+  width:33.333333%;
+}
+.row>*:nth-last-child(1):nth-of-type(4n + 1)+.row>*:nth-last-child(2):nth-of-type(4n + 2)+.row>*:nth-last-child(2):nth-of-type(4n + 3)+.row>*:nth-last-child(2):nth-of-type(4n + 4) {
+  color:red;
+  width:25%;
+}*/
+
+
 .row>* {
   padding:0px;
   margin:0px;

@@ -21,7 +21,10 @@
     $app->get("/", function() use ($app) {
 
         $colSize = 12/count($_SESSION['list_of_contacts']);
-
+        if($colSize < 3)
+        {
+          $colSize = 3;
+        }
         return $app['twig']->render('Contacts.html.twig', array('contacts' =>Contact::getAll(), 'colSize' => $colSize));
     });
 
