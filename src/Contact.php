@@ -71,6 +71,10 @@
             return $_SESSION['list_of_contacts'];
         }
 
+        static function deleteLast()
+        {
+          unset($_SESSION['list_of_contacts'][ count($_SESSION['list_of_contacts'])-1]);
+        }
         static function deleteAll()
         {
             $_SESSION['list_of_contacts'] = array();

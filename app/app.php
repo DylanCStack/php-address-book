@@ -32,8 +32,14 @@
         return $app['twig']->render('Create_contact.html.twig', array('contact' => $contact));
     });
 
+    $app->post("/Delete_last", function() use ($app) {
+        Contact::deleteLast();
+        return $app->redirect('/');
+    });
+
     $app->post('/Delete_contacts', function() use ($app) {
         Contact::deleteAll();
+
         return $app['twig']->render("Delete_contacts.html.twig");
     });
 

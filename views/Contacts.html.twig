@@ -13,8 +13,10 @@
                     <div class="row">
                       {%if contacts is not empty%}
                           <h1>Here are all of your contacts:</h1>
+                          {% set count = 0 %}
                           {%for contact in contacts%}
-                              <div class='col-md-{{colSize}}'>
+
+                              <div class='col-md-{{colSize}}' id='{{count}}'>
                                   <ul>
                                       <li>{{contact.getName}}</li>
                                       <li>{{contact.getEmail}}</li>
@@ -22,6 +24,7 @@
                                       <li>{{contact.getAddress2}}</li>
                                       <li>{{contact.getPhone}}</li>
                                   </ul>
+                                  {% set count = count + 1 %}
                               </div>
                           {%endfor%}
                       {%endif%}
@@ -56,6 +59,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-info">Add contact</button>
+            </form>
+            <form action='/Delete_last' method='post'>
+                <button type='submit' class='btn btn-warning'>Delete last contact</button>
             </form>
             <form action='/Delete_contacts' method='post'>
                 <button type='submit' class='btn btn-danger'>Delete all contacts</button>
