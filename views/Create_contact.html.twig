@@ -2,21 +2,24 @@
 <html>
     <head>
         <title>Your contacts page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
-        <h1>You added {{contact.getName}} as a new contact:</h1>
-        <ul>
-            <li>{{contact.getName}}</li>
-            <li>{{contact.getEmail}}</li>
-            <li>{{contact.getAddress1}}</li>
-            <li>{{contact.getAddress2}}</li>
-            <li>{{contact.getPhone}}</li>
-        </ul>
+        <div class="container">
+            <h1>You added {{contact.getName}} as a new contact:</h1>
+            <ul>
+                <li>{{contact.getName}}</li>
+                <li>{{contact.getEmail}}</li>
+                <li>{{contact.getAddress1}}</li>
+                <li>{{contact.getAddress2}}</li>
+                <li>{{contact.getPhone}}</li>
+            </ul>
 
 
 
-        <form action="/">
-            <button type='submit' class='btn success'>View your contacts</button>
-        </form>
+            <form action="/">
+                <button type='submit' class='btn success'>View your contacts</button>
+            </form>
+        </div>
     </body>
 </html>

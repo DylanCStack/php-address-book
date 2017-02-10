@@ -2,51 +2,54 @@
 <html>
     <head>
         <title>Your contacts page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
-        {%if contacts is not empty%}
-            <h1>Here are all of your contacts:</h1>
-            {%for contact in contacts%}
-            <ul>
-                <li>{{contact.getName}}</li>
-                <li>{{contact.getEmail}}</li>
-                <li>{{contact.getAddress1}}</li>
-                <li>{{contact.getAddress2}}</li>
-                <li>{{contact.getPhone}}</li>
-            </ul>
-            {%endfor%}
-        {%endif%}
-        {%if contacts is empty%}
-            <h1>You do not have any contacts</h1>
-        {%endif%}
+        <div class="container">
+            {%if contacts is not empty%}
+                <h1>Here are all of your contacts:</h1>
+                {%for contact in contacts%}
+                <ul>
+                    <li>{{contact.getName}}</li>
+                    <li>{{contact.getEmail}}</li>
+                    <li>{{contact.getAddress1}}</li>
+                    <li>{{contact.getAddress2}}</li>
+                    <li>{{contact.getPhone}}</li>
+                </ul>
+                {%endfor%}
+            {%endif%}
+            {%if contacts is empty%}
+                <h1>You do not have any contacts</h1>
+            {%endif%}
 
-        <form action="/Create_contact" method="post">
-            <h3>Enter a new contact</h3>
-            <div class="form-group">
-                <label for='name'>Name:</label>
-                <input type='text' name='name' id='name'>
-            </div>
-            <div class="form-group">
-                <label for='email'>Email:</label>
-                <input type='text' name='email' id='email'>
-            </div>
-            <div class="form-group">
-                <label for='phone'>Phone number:</label>
-                <input type='text' name='phone' id='phone'>
-            </div>
-            <div class="form-group">
-                <label for='address1'>Address line 1:</label>
-                <input type='text' name='address1' id='address1'>
-            </div>
-            <div class="form-group">
-                <label for='address2'>Address line 2:</label>
-                <input type='text' name='address2' id='address2'>
-            </div>
+            <form action="/Create_contact" method="post">
+                <h3>Enter a new contact</h3>
+                <div class="form-group">
+                    <label for='name'>Name:</label>
+                    <input type='text' name='name' id='name'>
+                </div>
+                <div class="form-group">
+                    <label for='email'>Email:</label>
+                    <input type='text' name='email' id='email'>
+                </div>
+                <div class="form-group">
+                    <label for='phone'>Phone number:</label>
+                    <input type='text' name='phone' id='phone'>
+                </div>
+                <div class="form-group">
+                    <label for='address1'>Address line 1:</label>
+                    <input type='text' name='address1' id='address1'>
+                </div>
+                <div class="form-group">
+                    <label for='address2'>Address line 2:</label>
+                    <input type='text' name='address2' id='address2'>
+                </div>
 
-            <button type="submit" class="btn btn-info">Add contact</button>
-        </form>
-        <form action='/Delete_contacts' method='post'>
-            <button type='submit' class='btn btn-danger'>Delete all contacts</button>
-        </form>
+                <button type="submit" class="btn btn-info">Add contact</button>
+            </form>
+            <form action='/Delete_contacts' method='post'>
+                <button type='submit' class='btn btn-danger'>Delete all contacts</button>
+            </form>
+        </div>
     </body>
 </html>
