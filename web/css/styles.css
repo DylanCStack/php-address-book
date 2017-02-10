@@ -1,0 +1,50 @@
+.addressBook {
+  background-color: beige;
+  margin-left: 30px;
+
+
+  font-family: 'Cabin Sketch', cursive;
+
+}
+.addressBook>div {
+  background-color: beige;
+  margin-left:30px;
+  border-left: 1px solid salmon;
+}
+.addressBook h1 {
+  width:100%;
+  padding-top: 20px;
+  margin:10px;
+  margin-left:0px;
+  border-bottom: 1px solid salmon;
+
+}
+.addressBook ul {
+  padding:0px;
+  margin: 0px;
+  padding-bottom: 1.25em;
+  width:100%;
+  border-bottom: 2px solid skyblue;
+}
+.addressBook li {
+  margin:0px;
+  padding:0px;
+  padding-left: 0px;
+  list-style: none;
+  border-bottom: 2px solid skyblue;
+  width:100%;
+}
+li:first-of-type {
+  font-size: 1.1em;
+  text-decoration: underline;
+
+}
+.row>* {
+  padding:0px;
+  margin:0px;
+}
+.row {
+  margin-left: 0px;
+  margin:0px;
+  padding:0px;
+}

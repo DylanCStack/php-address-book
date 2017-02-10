@@ -4,7 +4,6 @@
     require_once __DIR__."/../src/Contact.php";
 
     session_start();
-
     if (empty($_SESSION['list_of_contacts'])) {
         $_SESSION['list_of_contacts'] = array();
     }
@@ -20,7 +19,10 @@
 
 
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('Contacts.html.twig', array('contacts' =>Contact::getAll()));
+
+        $colSize = 12/count($_SESSION['list_of_contacts']);
+
+        return $app['twig']->render('Contacts.html.twig', array('contacts' =>Contact::getAll(), 'colSize' => $colSize));
     });
 
     $app->post('/Create_contact', function() use ($app) {

@@ -3,24 +3,34 @@
     <head>
         <title>Your contacts page</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            {%if contacts is not empty%}
-                <h1>Here are all of your contacts:</h1>
-                {%for contact in contacts%}
-                <ul>
-                    <li>{{contact.getName}}</li>
-                    <li>{{contact.getEmail}}</li>
-                    <li>{{contact.getAddress1}}</li>
-                    <li>{{contact.getAddress2}}</li>
-                    <li>{{contact.getPhone}}</li>
-                </ul>
-                {%endfor%}
-            {%endif%}
-            {%if contacts is empty%}
-                <h1>You do not have any contacts</h1>
-            {%endif%}
+            <div class="addressBook">
+                <div>
+                    <div class="row">
+                      {%if contacts is not empty%}
+                          <h1>Here are all of your contacts:</h1>
+                          {%for contact in contacts%}
+                              <div class='col-md-{{colSize}}'>
+                                  <ul>
+                                      <li>{{contact.getName}}</li>
+                                      <li>{{contact.getEmail}}</li>
+                                      <li>{{contact.getAddress1}}</li>
+                                      <li>{{contact.getAddress2}}</li>
+                                      <li>{{contact.getPhone}}</li>
+                                  </ul>
+                              </div>
+                          {%endfor%}
+                      {%endif%}
+                      {%if contacts is empty%}
+                          <h1>You do not have any contacts</h1>
+                      {%endif%}
+                    </div>
+                </div>
+            </div>
 
             <form action="/Create_contact" method="post">
                 <h3>Enter a new contact</h3>
