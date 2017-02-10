@@ -4,6 +4,10 @@
         <title>Your contacts page</title>
     </head>
     <body>
-        <h1>
+        <h1>Here are all of your contacts:</h1>
+        {%for contact in contacts%}
+        <ul>
+            <li>{{contact.getName}}</li>
+        </ul>
     </body>
 </html>
