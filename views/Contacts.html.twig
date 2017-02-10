@@ -7,7 +7,11 @@
         <h1>Here are all of your contacts:</h1>
         {%for contact in contacts%}
         <ul>
-
+            <li>{{contact.getName}}</li>
+            <li>{{contact.getEmail}}</li>
+            <li>{{contact.getAddress1}}</li>
+            <li>{{contact.getAddress2}}</li>
+            <li>{{contact.getPhone}}</li>
         </ul>
         {%endfor%}
 
