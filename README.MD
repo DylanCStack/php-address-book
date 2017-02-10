@@ -5,10 +5,11 @@ This website allows you save a contact's information (Name, Email, Phone Number,
 ##Setup
 ###Requirements
 This site requires some programs and frameworks to be installed on your computer in order to run it.
-    * PHP 5
-    * Composer
-    * A terminal shell (apple computers will have this by default)
-    * A web browser
+* PHP 5
+* Composer
+* A terminal shell (apple computers will have this by default)
+* A web browser
+
 ###Process to run
 1. Download or clone the project from [here](https://github.com/DylanCStack/php-address-book).
 2. From within your terminal program, navigate to the /web/ folder.
