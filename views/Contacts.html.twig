@@ -4,16 +4,21 @@
         <title>Your contacts page</title>
     </head>
     <body>
-        <h1>Here are all of your contacts:</h1>
-        {%for contact in contacts%}
-        <ul>
-            <li>{{contact.getName}}</li>
-            <li>{{contact.getEmail}}</li>
-            <li>{{contact.getAddress1}}</li>
-            <li>{{contact.getAddress2}}</li>
-            <li>{{contact.getPhone}}</li>
-        </ul>
-        {%endfor%}
+        {%if contacts is not empty%}
+            <h1>Here are all of your contacts:</h1>
+            {%for contact in contacts%}
+            <ul>
+                <li>{{contact.getName}}</li>
+                <li>{{contact.getEmail}}</li>
+                <li>{{contact.getAddress1}}</li>
+                <li>{{contact.getAddress2}}</li>
+                <li>{{contact.getPhone}}</li>
+            </ul>
+            {%endfor%}
+        {%endif%}
+        {%if contacts is empty%}
+            <h1>You do not have any contacts</h1>
+        {%endif%}
 
         <form action="/Create_contact" method="post">
             <h3>Enter a new contact</h3>

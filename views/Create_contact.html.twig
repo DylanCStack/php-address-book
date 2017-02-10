@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Your contacts page</title>
     </head>
     <body>
+        <h1>You added {{contact.getName}} as a new contact:</h1>
+        <ul>
+            <li>{{contact.getName}}</li>
+            <li>{{contact.getEmail}}</li>
+            <li>{{contact.getAddress1}}</li>
+            <li>{{contact.getAddress2}}</li>
+            <li>{{contact.getPhone}}</li>
+        </ul>
+
+
+
+        <form action="/">
+            <button type='submit' class='btn success'>View your contacts</button>
+        </form>
     </body>
 </html>
